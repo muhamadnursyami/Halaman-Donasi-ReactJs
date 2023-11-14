@@ -1,6 +1,6 @@
 import donasiUang from "../../assets/svg/donasi-uang.svg";
 import donasiBarang from "../../assets/svg/donasi-barang.svg";
-
+import { Link } from "react-router-dom";
 export default function Donasi() {
   return (
     <section>
@@ -17,13 +17,14 @@ export default function Donasi() {
             berkontribusi positif dalam masyarakat.
           </p>
         </div>
-        <a
-          style={{ backgroundColor: " #29AB92" }}
+        <Link
           className="btn btn-light  border-0 text-white rounded-pill shadow px-3 py-2 mb-5"
-          href="#"
+          style={{ backgroundColor: " #29AB92" }}
+          to={`/halaman-donasi/donasi-uang`}
         >
           Mulai Donasi &rarr;
-        </a>
+        </Link>
+
         <div className="row align-items-center">
           <img src={donasiBarang} className="img-fluid" alt="donasi-uang" />
         </div>
@@ -36,13 +37,14 @@ export default function Donasi() {
             memberikan dampak positif dalam komunitas mereka.
           </p>
         </div>
-        <a
-          style={{ backgroundColor: " #29AB92" }}
+
+        <Link
           className="btn btn-light  border-0 text-white rounded-pill shadow px-3 py-2"
-          href="#"
+          style={{ backgroundColor: " #29AB92" }}
+          to={`/halaman-donasi/donasi-barang`}
         >
           Mulai Donasi &rarr;
-        </a>
+        </Link>
       </div>
     </section>
   );
